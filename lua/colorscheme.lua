@@ -1,5 +1,5 @@
 local colorscheme = "material"
-local style = "deep ocean"
+local style = "darker"
 
 vim.g.material_style = style
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
