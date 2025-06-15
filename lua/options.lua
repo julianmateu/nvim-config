@@ -7,7 +7,7 @@ vim.o.number = true -- Show line numbers
 vim.o.relativenumber = true -- Show relative numbners to the current line
 vim.o.cursorline = true -- Show which line your cursor is on
 vim.o.smartindent = true -- Autoindent new lines
-vim.o.showmode = true -- Show the current mode
+vim.o.showmode = false -- Show the current mode
 
 -- Indentation and tabs
 -- See `:help tabstop`

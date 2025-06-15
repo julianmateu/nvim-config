@@ -39,19 +39,19 @@ vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, add_to_opts({ desc =
 --  Use CTRL+<hjkl> to switch between windows
 --
 --  See `:help wincmd` for a list of all window commands
-vim.keymap.set("n", "<C-h>", "<C-w><C-h>", add_to_opts({ desc = "Move focus to the left window" }))
-vim.keymap.set("n", "<C-l>", "<C-w><C-l>", add_to_opts({ desc = "Move focus to the right window" }))
-vim.keymap.set("n", "<C-j>", "<C-w><C-j>", add_to_opts({ desc = "Move focus to the lower window" }))
-vim.keymap.set("n", "<C-k>", "<C-w><C-k>", add_to_opts({ desc = "Move focus to the upper window" }))
+vim.keymap.set("n", "<C-h>", "<C-w>h", add_to_opts({ desc = "Move focus to the left window" }))
+vim.keymap.set("n", "<C-l>", "<C-w>l", add_to_opts({ desc = "Move focus to the right window" }))
+vim.keymap.set("n", "<C-j>", "<C-w>j", add_to_opts({ desc = "Move focus to the lower window" }))
+vim.keymap.set("n", "<C-k>", "<C-w>k", add_to_opts({ desc = "Move focus to the upper window" }))
 
 -- Explorer
 vim.keymap.set("n", "<leader>e", ":Lexplore 20<CR>", add_to_opts({ desc = "Open explorer window to the left" }))
 
 -- Resize with arrows
-vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", add_to_opts({ desc = "Decrease vertical size" }))
-vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", add_to_opts({ desc = "Increase vertical size" }))
-vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", add_to_opts({ desc = "Decrease horizontal size" }))
-vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", add_to_opts({ desc = "Increase horizontal size" }))
+vim.keymap.set("n", "<C-Up>", ":resize -2<CR>", add_to_opts({ desc = "Decrease vertical size" }))
+vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", add_to_opts({ desc = "Increase vertical size" }))
+vim.keymap.set("n", "<C-Left>", ":vertical resize +2<CR>", add_to_opts({ desc = "Increase horizontal size" }))
+vim.keymap.set("n", "<C-Right>", ":vertical resize -2<CR>", add_to_opts({ desc = "Decrease horizontal size" }))
 
 -- Navigate buffers
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", add_to_opts({ desc = "Move to next buffer" }))
