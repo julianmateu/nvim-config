@@ -1,7 +1,5 @@
-local colorscheme = "material"
-local style = "darker"
+local colorscheme = "catppuccin"
 
-vim.g.material_style = style
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
 if not status_ok then
