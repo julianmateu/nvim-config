@@ -49,7 +49,7 @@ vim.keymap.set("n", "<C-j>", ":cnext<CR>", add_to_opts({ desc = "Move to the nex
 vim.keymap.set("n", "<C-k>", ":cprevious<CR>", add_to_opts({ desc = "Move to the previous item in the quickfix list" }))
 
 -- Explorer
-vim.keymap.set("n", "<leader>e", ":Lexplore 20<CR>", add_to_opts({ desc = "Open explorer window to the left" }))
+-- vim.keymap.set("n", "<leader>e", ":Lexplore 20<CR>", add_to_opts({ desc = "Open explorer window to the left" }))
 
 -- Resize with arrows
 vim.keymap.set("n", "<A-Up>", ":resize -2<CR>", add_to_opts({ desc = "Decrease vertical size" }))

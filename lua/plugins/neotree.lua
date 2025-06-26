@@ -14,5 +14,13 @@ return {
 		opts = {
 			-- fill any relevant options here
 		},
+		config = function()
+			vim.keymap.set(
+				"n",
+				"<leader>e",
+				":Neotree toggle<CR>",
+				{ noremap = true, silent = true, desc = "Open explorer window to the left (Neotree)" }
+			)
+		end,
 	},
 }
