@@ -1,9 +1,10 @@
 return {
-	{
-		"akinsho/toggleterm.nvim",
-		version = "*",
-		opts = {
-			open_mapping = [[<c-\>]],
-		},
-	},
+  {
+    "akinsho/toggleterm.nvim",
+    cond = (function() return not vim.g.vscode end),
+    version = "*",
+    opts = {
+      open_mapping = [[<c-\>]],
+    },
+  },
 }
