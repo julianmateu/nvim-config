@@ -61,21 +61,20 @@ vim.keymap.set("n", "<A-Right>", ":vertical resize -2<CR>", add_to_opts({ desc =
 vim.keymap.set("n", "<S-l>", ":bnext<CR>", add_to_opts({ desc = "Move to next buffer" }))
 vim.keymap.set("n", "<S-h>", ":bprevious<CR>", add_to_opts({ desc = "Move to previous buffer" }))
 
--- Move text up and down
-vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", add_to_opts({ desc = "Move current line up a line" }))
-vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", add_to_opts({ desc = "Move current line down a line" }))
--- In MacOS the alt key is used to inpuut special symbols
+-- Detect if we're on macOS
+local is_mac = vim.fn.has("mac") == 1 or vim.fn.has("macunix") == 1
+
+-- Move text up and down (macOS only, to avoid Escape sequence conflicts on Linux)
+if is_mac then
+	vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", add_to_opts({ desc = "Move current line up a line" }))
+	vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", add_to_opts({ desc = "Move current line down a line" }))
+end
+-- In MacOS the alt key is used to input special symbols (these unicode chars work on macOS)
 vim.keymap.set("n", "˚", ":m .-2<CR>==", add_to_opts({ desc = "Move current line up a line" }))
 vim.keymap.set("n", "∆", ":m .+1<CR>==", add_to_opts({ desc = "Move current line down a line" }))
 
 -- [[ Insert Mode ]]
-
--- Move text up and down
-vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", add_to_opts({ desc = "Move current line up a line" }))
-vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", add_to_opts({ desc = "Move current line down a line" }))
--- In MacOS the alt key is used to inpuut special symbols
-vim.keymap.set("i", "˚", "<Esc>:m .-2<CR>==gi", add_to_opts({ desc = "Move current line up a line" }))
-vim.keymap.set("i", "∆", "<Esc>:m .+1<CR>==gi", add_to_opts({ desc = "Move current line down a line" }))
+-- (Insert mode line movement removed to avoid conflicts with Escape sequences)
 
 -- [[ Visual Mode ]]
 -- Stay in indent mode
