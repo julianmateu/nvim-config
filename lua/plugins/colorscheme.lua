@@ -12,7 +12,7 @@ return {
           dark = "mocha",
         },
       })
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("catppuccin-nvim")
       vim.o.background = "light"
     end,
   },

@@ -1,4 +1,4 @@
-local colorscheme = "catppuccin"
+local colorscheme = "catppuccin-nvim"
 
 local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 
