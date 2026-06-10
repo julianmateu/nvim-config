@@ -15,7 +15,9 @@ return {
       { "j-hui/fidget.nvim", opts = {} },
 
       -- Allows extra capabilities provided by blink.cmp
-      "saghen/blink.cmp",
+      -- Pinned to v1: v2 is a breaking major that requires the separate
+      -- saghen/blink.lib plugin and is still under active development.
+      { "saghen/blink.cmp", version = "1.*" },
     },
     config = function()
       -- Brief aside: **What is LSP?**
