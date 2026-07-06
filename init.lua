@@ -6,6 +6,7 @@
 
 require("globals")
 require("options")
+require("filetypes")
 require("autocommands")
 require("lazy-bootstrap")
 require("lazy-plugins")
