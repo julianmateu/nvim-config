@@ -10,7 +10,8 @@ return {
       -- plugin directory itself. They shadow the ones main installs to
       -- stdpath('data')/site and break highlighting (parser found but no
       -- highlights query -> regex syntax disabled, nothing painted).
-      -- No-op once removed; safe to delete after all machines have run it.
+      -- No-op once removed.
+      -- TODO: delete this migration snippet once all machines have run it.
       local stale_parsers = vim.fn.stdpath("data") .. "/lazy/nvim-treesitter/parser"
       if vim.uv.fs_stat(stale_parsers) then
         vim.notify("nvim-treesitter: removing stale master-branch parsers", vim.log.levels.INFO)
@@ -20,12 +21,19 @@ return {
       require("nvim-treesitter").install({
         "bash",
         "c",
+        "c_sharp",
+        "cpp",
         "diff",
+        "go",
         "html",
+        "java",
+        "javascript",
+        "json",
         "lua",
         "luadoc",
         "markdown",
         "markdown_inline",
+        "python",
         "query",
         "rust",
         "vim",
